@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "description": "Regional Teaser style governance rules",
+  "rules": [
+    {
+      "region": "/content/wknd/language-masters/en",
+      "componentType": "teaser",
+      "allowedStyleIds": ["item0", "item1"],
+      "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196",
+      "notes": "US market: Default and Featured permitted"
+    },
+    {
+      "region": "/content/wknd/language-masters/de",
+      "componentType": "teaser",
+      "allowedStyleIds": ["item0"],
+      "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196",
+      "notes": "DE market: Default only"
+    },
+    {
+      "region": "/content/wknd/language-masters/fr",
+      "componentType": "teaser",
+      "allowedStyleIds": ["item0", "item1", "item2"],
+      "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196",
+      "notes": "AU market: all styles approved"
+    }
+  ]
+}

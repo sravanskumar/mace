@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "mace": {
+      "command": "node",
+      "args": ["/REPLACE_WITH_ABSOLUTE_PATH_TO/mace/dist/index.js"],
+      "env": {
+        "AEM_BASE_URL": "http://localhost:4502",
+        "AEM_USERNAME": "wknd-governance-service",
+        "AEM_PASSWORD": "REPLACE_WITH_PASSWORD",
+        "AEM_MAX_PAGES": "500",
+        "TRAVERSAL_DEPTH": "10"
+      }
+    }
+  }
+}

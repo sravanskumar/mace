@@ -6,7 +6,11 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "audit-policy": "ts-node src/audit-policy-structure.ts",
+    "test": "npm run build && node dist/template-policy-resolver.test.js",
+    "acceptance": "npm run build && node scripts/run-acceptance.cjs",
+    "debug-policy": "node scripts/debug-policy-resolution.cjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

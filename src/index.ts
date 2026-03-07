@@ -1,4 +1,12 @@
-import "dotenv/config";
+import path from "path";
+import { config } from "dotenv";
+
+// Load .env from project root (relative to dist/ at runtime) so MACE works when
+// launched by Claude Desktop or Cursor with a different cwd.
+const projectRoot = path.resolve(__dirname, "..");
+config({ path: path.join(projectRoot, ".env") });
+process.env.MACE_PROJECT_ROOT = projectRoot;
+
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import {
@@ -33,13 +41,13 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   switch (name) {
     case "list_pages":
       return handleListPages(request.params.arguments ?? {});
-    case "list_teaser_style_violations":
+    case "list_style_violations":
       return handleListViolations(request.params.arguments ?? {});
     case "list_component_styles":
       return handleListStyles(request.params.arguments ?? {});
     case "update_component_style":
       return handleUpdateStyle(request.params.arguments ?? {});
-    case "fix_teaser_style_violations":
+    case "fix_style_violations":
       return handleFixViolations(request.params.arguments ?? {});
     default:
       throw new Error("Unknown tool: " + name);

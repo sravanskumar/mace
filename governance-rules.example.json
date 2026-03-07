@@ -1,0 +1,36 @@
+{
+  "version": "1.1",
+  "description": "Regional style governance: allowedStyleNames per component (cq:styleLabel values).",
+  "rules": [
+    {
+      "region": "/content/wknd/language-masters/en",
+      "components": [
+        {
+          "type": "wknd/components/teaser",
+          "allowedStyleNames": ["Featured"],
+          "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196"
+        }
+      ]
+    },
+    {
+      "region": "/content/wknd/language-masters/de",
+      "components": [
+        {
+          "type": "wknd/components/teaser",
+          "allowedStyleNames": ["Featured"],
+          "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196"
+        }
+      ]
+    },
+    {
+      "region": "/content/wknd/language-masters/fr",
+      "components": [
+        {
+          "type": "wknd/components/teaser",
+          "allowedStyleNames": ["Featured", "List", "Hero", "Hero Image Top", "Hero Image Bottom", "Card", "Secure"],
+          "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196"
+        }
+      ]
+    }
+  ]
+}

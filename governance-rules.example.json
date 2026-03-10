@@ -7,8 +7,7 @@
       "components": [
         {
           "type": "wknd/components/teaser",
-          "allowedStyleNames": ["Featured"],
-          "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196"
+          "allowedStyleNames": ["Featured"]
         }
       ]
     },
@@ -17,8 +16,7 @@
       "components": [
         {
           "type": "wknd/components/teaser",
-          "allowedStyleNames": ["Featured"],
-          "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196"
+          "allowedStyleNames": ["Featured"]
         }
       ]
     },
@@ -27,8 +25,7 @@
       "components": [
         {
           "type": "wknd/components/teaser",
-          "allowedStyleNames": ["Featured", "List", "Hero", "Hero Image Top", "Hero Image Bottom", "Card", "Secure"],
-          "policyPath": "/conf/wknd/settings/wcm/policies/wknd/components/teaser/policy_1555539430196"
+          "allowedStyleNames": ["Featured", "List", "Hero", "Hero Image Top", "Hero Image Bottom", "Card", "Secure"]
         }
       ]
     }

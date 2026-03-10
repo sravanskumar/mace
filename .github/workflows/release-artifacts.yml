@@ -1,0 +1,48 @@
+name: Release Artifacts
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Package dist artifact
+        run: |
+          set -euo pipefail
+          VERSION="${GITHUB_REF_NAME}"
+          ASSET="mace-${VERSION}-dist.zip"
+          zip -r "${ASSET}" \
+            dist \
+            package.json \
+            package-lock.json \
+            README.md \
+            SETUP.md \
+            governance-rules.example.json
+          echo "ASSET=${ASSET}" >> "$GITHUB_ENV"
+
+      - name: Upload asset to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ASSET }}
+

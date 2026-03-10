@@ -4,3 +4,12 @@ dist/
 .DS_Store
 **/.DS_Store
 docs/*.docx
+*.docx
+
+# Local-only reference materials / artifacts
+files/
+files.zip
+mace-aem.log
+
+# Local governance rules (copy from governance-rules.example.json)
+governance-rules.json
